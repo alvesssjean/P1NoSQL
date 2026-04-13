@@ -66,7 +66,7 @@
 
 1) Buscando todos os alunos:
 
--  escola> db.alunos.find()
+-  db.alunos.find()
 
 [
   {
@@ -122,7 +122,7 @@
 
 2) Buscar alunos do curso "ADS"
 
-escola> db.alunos.find({"curso": "ADS"})
+-  db.alunos.find({"curso": "ADS"})
 [
   {
     _id: ObjectId('69dcf8cfe0e998c88d44ba89'),
@@ -152,7 +152,7 @@ escola> db.alunos.find({"curso": "ADS"})
 
 3) Buscar alunos com idade maior que 21:
 
-escola> db.alunos.find({ "idade": { "$gt": 21 } })
+-  db.alunos.find({ "idade": { "$gt": 21 } })
 [
   {
     _id: ObjectId('69dcfa895d4d7e224b44ba89'),
@@ -174,7 +174,7 @@ escola> db.alunos.find({ "idade": { "$gt": 21 } })
 
 4) Atualizar a idade de um aluno:
 
-escola> db.alunos.findOneAndUpdate({"nome": "Beatriz Oliveira"}, {$set: {"idade": 24}})
+-  db.alunos.findOneAndUpdate({"nome": "Beatriz Oliveira"}, {$set: {"idade": 24}})
 {
   _id: ObjectId('69dcfa895d4d7e224b44ba89'),
   nome: 'Beatriz Oliveira',
@@ -186,7 +186,7 @@ escola> db.alunos.findOneAndUpdate({"nome": "Beatriz Oliveira"}, {$set: {"idade"
 
 5) Adicionar uma nova nota a um aluno:
 
-escola> db.alunos.updateOne(
+-  db.alunos.updateOne(
 |   { "nome": "João Silva" },
 |   { "$push": { "notas": 10 } }
 | )
@@ -200,7 +200,7 @@ escola> db.alunos.updateOne(
 
 6) Remover um aluno: 
 
-escola> db.alunos.findOneAndDelete({"nome": "João Silva"})
+-  db.alunos.findOneAndDelete({"nome": "João Silva"})
 {
   _id: ObjectId('69dcf8cfe0e998c88d44ba89'),
   nome: 'João Silva',
@@ -212,7 +212,7 @@ escola> db.alunos.findOneAndDelete({"nome": "João Silva"})
 
 7) Média de notas por aluno:
 
-escola> db.alunos.aggregate([
+-  db.alunos.aggregate([
 |   {
 |     $addFields: {
 |       media: { $avg: "$notas" }
@@ -270,7 +270,7 @@ escola> db.alunos.aggregate([
 
 8) Quantidade de alunos por curso:
 
-db.alunos.aggregate([
+-  db.alunos.aggregate([
   {
     $group: {
       _id: "$curso",       

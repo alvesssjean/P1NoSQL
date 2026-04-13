@@ -95,24 +95,22 @@
 7) Média de notas por aluno:
 
 -  db.alunos.aggregate([
-|   {
-|     $addFields: {
-|       media: { $avg: "$notas" }
-|     }
-|   }
-| ])
+{
+$addFields: {
+media: { $avg: "$notas" }
+}}])
 
 
 
 8) Quantidade de alunos por curso:
 
 -  db.alunos.aggregate([
-  {
-    $group: {
-      _id: "$curso",       
-      quantidade: { $sum: 1 }
-    }
-  }
+{
+$group:{
+_id:"$curso",
+quantidade:{$sum:1}
+}
+}
 ])
 
 

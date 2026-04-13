@@ -85,10 +85,7 @@
 
 5) Adicionar uma nova nota a um aluno:
 
--  db.alunos.updateOne(
-|   { "nome": "João Silva" },
-|   { "$push": { "notas": 10 } }
-| )
+-  db.alunos.updateOne({ "nome": "Beatriz Oliveira" }, { "$push": { "notas": 10 } })
 
 
 6) Remover um aluno: 

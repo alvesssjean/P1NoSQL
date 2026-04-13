@@ -1,0 +1,17 @@
+# Python
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+
+# Docker & Banco de Dados
+mongo_data/
+
+# IDEs
+.vscode/
+.idea/
+
+# Sistema
+.DS_Store
+Thumbs.db

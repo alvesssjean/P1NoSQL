@@ -2,67 +2,45 @@
 
 -  Criando a collection, inserindo os alunos do modelo:
 
-|   {
-|     "nome": "Beatriz Oliveira", 
-|     "idade": 22,
-|     "curso": "Engenharia de Software",
-|     "notas": [9, 8.5, 10],
-|     "endereco": {
-|       "cidade": "Niterói",
-|       "estado": "RJ"
-|     }
-|   },
-|   {
-|     "nome": "Marcos Souza",
-|     "idade": 19,
-|     "curso": "Sistemas de Informação",
-|     "notas": [6, 7.5, 8],
-|     "endereco": {
-|       "cidade": "São Gonçalo",
-|       "estado": "RJ"
-|     }
-|   },
-|   {
-|     "nome": "Ana Clara Lima",
-|     "idade": 21,
-|     "curso": "ADS",
-|     "notas": [10, 9, 9.5],
-|     "endereco": {
-|       "cidade": "Rio de Janeiro",
-|       "estado": "RJ"
-|     }
-|   },
-|   {
-|     "nome": "Ricardo Pereira",
-|     "idade": 25,
-|     "curso": "Ciência da Computação",
-|     "notas": [5.5, 6, 7],
-|     "endereco": {
-|       "cidade": "Maricá",
-|       "estado": "RJ"
-|     }
-|   },
-|   {
-|     "nome": "Juliana Costa",
-|     "idade": 20,
-|     "curso": "ADS",
-|     "notas": [8, 8, 8.5],
-|     "endereco": {
-|       "cidade": "Itaboraí",
-|       "estado": "RJ"
-|     }
-|   }
-| ])
-{
-  acknowledged: true,
-  insertedIds: {
-    '0': ObjectId('69dcfa895d4d7e224b44ba89'),
-    '1': ObjectId('69dcfa895d4d7e224b44ba8a'),
-    '2': ObjectId('69dcfa895d4d7e224b44ba8b'),
-    '3': ObjectId('69dcfa895d4d7e224b44ba8c'),
-    '4': ObjectId('69dcfa895d4d7e224b44ba8d')
+db.alunos.insertMany([
+  {
+    "nome": "Beatriz Oliveira",
+    "idade": 22,
+    "curso": "Engenharia de Software",
+    "notas": [9, 8.5, 10],
+    "endereco": { "cidade": "Niterói", "estado": "RJ" }
+  },
+  {
+    "nome": "Marcos Souza",
+    "idade": 19,
+    "curso": "Sistemas de Informação",
+    "notas": [6, 7.5, 8],
+    "endereco": { "cidade": "São Gonçalo", "estado": "RJ" }
+  },
+  {
+    "nome": "Ana Clara Lima",
+    "idade": 21,
+    "curso": "ADS",
+    "notas": [10, 9, 9.5],
+    "endereco": { "cidade": "Rio de Janeiro", "estado": "RJ" }
+  },
+  {
+    "nome": "Ricardo Pereira",
+    "idade": 25,
+    "curso": "Ciência da Computação",
+    "notas": [5.5, 6, 7],
+    "endereco": { "cidade": "Maricá", "estado": "RJ" }
+  },
+  {
+    "nome": "Juliana Costa",
+    "idade": 20,
+    "curso": "ADS",
+    "notas": [8, 8, 8.5],
+    "endereco": { "cidade": "Itaboraí", "estado": "RJ" }
   }
-}
+])
+
+
 
 1) Buscando todos os alunos:
 
